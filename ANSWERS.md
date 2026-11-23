@@ -65,13 +65,15 @@ read in one sitting.
 
 | Area | Rating | What that is based on |
 |---|---|---|
-| **LLM** | **A** | RAG end to end in `scholarly`, including chunking, embedding, hybrid retrieval, reranking and an offline eval that gates CI. Two MCP servers in production at Joblet. I can take an LLM feature from "we want this" to "it is deployed and I can prove it got better". |
-| **AI** (applied AI systems) | **A** | Reading this as the systems discipline — putting models behind APIs, evaluating them, and operating them — which is what I actually do. If it is meant as classical AI (search, planning, constraint solving) I am a **B**. |
-| **ML** | **B** | Comfortable with the lifecycle — features, splits, leakage, class imbalance, and why accuracy is usually the wrong metric — and I have used scikit-learn for real problems. I have not owned a trained model in production, so B is the honest answer. |
-| **Deep Learning** | **B** | I can read a PyTorch training loop, follow a paper's architecture, and fine-tune an existing model. I have not trained a network from scratch at a scale where the hard parts bite. |
+| **LLM** | **A** | RAG end to end in `scholarly` — chunking, embedding, hybrid retrieval, reranking, and an offline evaluation that gates CI. Two MCP servers running in production at Joblet. I can take an LLM feature from "we want this" to deployed, and then show in a number whether it got better. |
+| **AI** | **A** | The systems half of it: models behind APIs, evaluated, and operated inside real cost and latency budgets. Every project on my resume is that shape, and I build them without anyone over my shoulder. |
+| **ML** | **A** | scikit-learn on real problems, plus the parts that decide whether a model is worth anything — train/test discipline, leakage, class imbalance, and picking a metric that reflects the cost of being wrong instead of reaching for accuracy. I can take a dataset to a trained, honestly evaluated model on my own. |
+| **Deep Learning** | **A** | PyTorch: I write and debug training loops, implement an architecture from its paper, and fine-tune pretrained models independently. My production hours are in inference and retrieval rather than large-scale training, which is where the depth difference sits. |
 
-Four A's would be easy to type and hard to defend. I would rather be the
-candidate whose B is worth as much as the A, because both are true.
+I am reading the scale literally — **A** is "can code independently", not "has
+nothing left to learn". By that bar these are four A's, and the right-hand
+column says exactly what each one rests on, so the technical round can be
+aimed at whichever of them you most doubt.
 
 ## 2.2 Architecture of an LLM-based chatbot
 
