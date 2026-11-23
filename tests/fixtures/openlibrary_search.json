@@ -1,0 +1,12 @@
+{
+  "numFound": 7,
+  "docs": [
+    { "title": "Security Engineering", "author_name": ["Ross Anderson"], "first_publish_year": 2001 },
+    { "title": "The Web Application Hacker's Handbook", "author_name": ["Dafydd Stuttard", "Marcus Pinto"], "first_publish_year": 2007 },
+    { "title": "Practical Malware Analysis", "author_name": ["Michael Sikorski"], "first_publish_year": 2012 },
+    { "title": "  ", "author_name": ["Nobody At All"], "first_publish_year": 1999 },
+    { "title": "A Book With No Author", "first_publish_year": 1998 },
+    { "title": "A Book From The Future", "author_name": ["Time Traveller"], "first_publish_year": 3099 },
+    { "title": "A Book With A Text Year", "author_name": ["Sloppy Data"], "first_publish_year": "1995" }
+  ]
+}

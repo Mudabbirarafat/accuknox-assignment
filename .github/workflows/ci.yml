@@ -1,0 +1,28 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install -r requirements.txt
+      # No network in CI: every test runs against the local fixtures or the
+      # loopback HTTP server in tests/test_http.py, so a flaky third-party
+      # API can never turn into a red build.
+      - run: python -m pytest -q
+      # Proof the three scripts run end to end, not just that their parts do.
+      - run: python -m src.task1_books --offline tests/fixtures/openlibrary_search.json
+      - run: python -m src.task2_scores --offline data/scores.json
+      - run: python -m src.task3_users --csv data/users.csv --export output/users.csv

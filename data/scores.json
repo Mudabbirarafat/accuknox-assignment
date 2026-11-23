@@ -1,0 +1,18 @@
+{
+  "test": "Unit 3 assessment",
+  "max_score": 100,
+  "scores": [
+    { "student_id": "S-1001", "name": "Aarav Sharma",   "subject": "Mathematics", "score": 91 },
+    { "student_id": "S-1002", "name": "Diya Patel",     "subject": "Mathematics", "score": 78 },
+    { "student_id": "S-1003", "name": "Vihaan Reddy",   "subject": "Mathematics", "score": 64 },
+    { "student_id": "S-1004", "name": "Ananya Iyer",    "subject": "Mathematics", "score": 88 },
+    { "student_id": "S-1005", "name": "Arjun Nair",     "subject": "Mathematics", "score": 52 },
+    { "student_id": "S-1006", "name": "Ishita Bose",    "subject": "Mathematics", "score": 95 },
+    { "student_id": "S-1007", "name": "Kabir Menon",    "subject": "Mathematics", "score": "83" },
+    { "student_id": "S-1008", "name": "Meera Krishnan", "subject": "Mathematics", "score": 71 },
+    { "student_id": "S-1009", "name": "Rohan Gupta",    "subject": "Mathematics", "score": 105 },
+    { "student_id": "S-1010", "name": "Saanvi Rao",     "subject": "Mathematics", "score": 0 },
+    { "student_id": "S-1011", "name": "Tanvi Joshi",    "subject": "Mathematics", "score": 86 },
+    { "student_id": "S-1012", "name": "Yash Agarwal",   "subject": "Mathematics", "score": 74 }
+  ]
+}
