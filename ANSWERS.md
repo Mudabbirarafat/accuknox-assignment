@@ -82,7 +82,7 @@ around an unreliable one.
 
 ```mermaid
 flowchart TB
-    USER([User])
+    USER([User asks])
 
     subgraph EDGE ["Edge"]
         GATE["Gateway<br/>authn · rate limit · quota · audit"]
@@ -112,6 +112,9 @@ flowchart TB
         EVAL["Offline evals<br/>regression gates"]
     end
 
+    GOUT["Output guardrails<br/>grounding check · schema · filters"]
+    REPLY([Answer, with citations])
+
     USER --> GATE --> GIN --> ORC
     ORC <--> TOOL
     ORC --> REWR --> RETR --> RANK --> ORC
@@ -119,9 +122,9 @@ flowchart TB
     INGEST --> VDB
     ORC <--> MGW
     MGW <--> LLM
-    ORC --> GOUT["Output guardrails<br/>grounding check · schema · filters"]
-    GOUT --> USER
-    ORC -.-> OBS -.-> EVAL
+    ORC --> GOUT --> REPLY
+    ORC -.-> OBS
+    OBS -.-> EVAL
 ```
 
 ### The components, and what breaks without each
